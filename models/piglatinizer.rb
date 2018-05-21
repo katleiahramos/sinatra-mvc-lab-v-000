@@ -9,7 +9,6 @@ def piglatinize(string)
   elsif consonants.include?(str[0]) && consonants.include?(str[1])
     string[2..-1] + string[0..1] + 'ay'
   elsif consonants.include?(str[0])
-    binding.pry
     string[1..-1] + string[0] + 'ay'
   else
     string # return unchanged
