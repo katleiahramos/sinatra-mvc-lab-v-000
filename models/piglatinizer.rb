@@ -1,18 +1,12 @@
 class PigLatinizer
 def piglatinize(str)
-  alpha = ('a'..'z').to_a
-  vowels = %w[a e i o u]
-  consonants = alpha - vowels
-
-  if vowels.include?(str[0])
-    str + 'ay'
-  elsif consonants.include?(str[0]) && consonants.include?(str[1])
-    str[2..-1] + str[0..1] + 'ay'
-  elsif consonants.include?(str[0])
-    str[1..-1] + str[0] + 'ay'
-  else
-    str # return unchanged
+    if word =~ (/\A[aeiou]/i)
+      word = word + 'ay'
+    elsif word =~ (/\A[^aeiou]/i)
+      match = /\A[^aeiou]/i.match(word)
+      word = match.post_match + match.to_s + 'ay'
+    end
+    word
   end
-end
 
 end
