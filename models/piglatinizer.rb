@@ -1,3 +1,4 @@
+class Piglatinizer
 def translate str
   alpha = ('a'..'z').to_a
   vowels = %w[a e i o u]
@@ -13,3 +14,5 @@ def translate str
     str # return unchanged
   end
 end
+
+end 
