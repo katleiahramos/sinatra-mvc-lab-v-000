@@ -7,3 +7,5 @@ def piglatin(word)
   end
   word
 end
+
+binding.pry
