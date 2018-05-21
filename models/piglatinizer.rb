@@ -7,11 +7,11 @@ def piglatinize(string)
   if vowels.include?(str[0])
     string + 'way'
   elsif consonants.include?(str[0]) && consonants.include?(str[1])
-    str[2..-1] + str[0..1] + 'ay'
+    string[2..-1] + string[0..1] + 'ay'
   elsif consonants.include?(str[0])
-    str[1..-1] + str[0] + 'ay'
+    string[1..-1] + string[0] + 'ay'
   else
-    str # return unchanged
+    string # return unchanged
   end
 end
 
