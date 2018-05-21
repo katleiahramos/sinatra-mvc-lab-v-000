@@ -13,5 +13,3 @@ def translate str
     str # return unchanged
   end
 end
-
-binding.pry
