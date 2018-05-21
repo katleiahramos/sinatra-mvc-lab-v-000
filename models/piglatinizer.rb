@@ -15,4 +15,4 @@ def translate str
   end
 end
 
-end 
+end
